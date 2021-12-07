@@ -1,6 +1,6 @@
-import "./css/styles.css";
 import coutriesToFetch from "./fetcher";
 import { debounce } from "lodash";
+import "./css/styles.css";
 
 const DEBOUNCE_DELAY = 300;
 const inputForm = document.getElementById("search-box");
@@ -31,6 +31,7 @@ function getCountryList(data) {
           class="flag-list"
           src="${item.flags.svg}"
           alt="flag"
+          width='250'
         />
         <h2 class="list-item-h2">${item.name.official}</h2>
       </li>`;
@@ -48,6 +49,7 @@ function addCountryInfo(data) {
           class="flag"
           src="${item.flags.svg}"
           alt="flag"
+          width='250'
         />
         <h1>${item.name.official}</h1>
       </div>
